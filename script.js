@@ -112,17 +112,20 @@
       loginBtn.disabled = true;
       
       setTimeout(() => {
+        const success = false; // Simulación
+        if (!success) {
+          alert('Error: Credenciales incorrectas.');
+          loginBtn.textContent = 'Iniciar Sesión';
+          loginBtn.disabled = false;
+          return;
+        }
+      
         alert('¡Inicio de sesión exitoso! Bienvenido al Hotel Luxe.');
         loginBtn.textContent = 'Iniciar Sesión';
         loginBtn.disabled = false;
         loginForm.reset();
-        
-        // Limpiar mensajes de validación
-        emailValidation.textContent = '';
-        emailValidation.classList.remove('error', 'success');
-        passwordValidation.textContent = '';
-        passwordValidation.classList.remove('error', 'success');
       }, 1500);
+
     }
   });
   
