@@ -112,20 +112,32 @@
       loginBtn.disabled = true;
       
       setTimeout(() => {
+        const success = false; // Simulación
+        if (!success) {
+          alert('Error: Credenciales incorrectas.');
+          loginBtn.textContent = 'Iniciar Sesión';
+          loginBtn.disabled = false;
+          return;
+        }
+      
         alert('¡Inicio de sesión exitoso! Bienvenido al Hotel Luxe.');
         loginBtn.textContent = 'Iniciar Sesión';
         loginBtn.disabled = false;
         loginForm.reset();
-        
-        // Limpiar mensajes de validación
-        emailValidation.textContent = '';
-        emailValidation.classList.remove('error', 'success');
-        passwordValidation.textContent = '';
-        passwordValidation.classList.remove('error', 'success');
       }, 1500);
+
     }
   });
   
+  formInputs.forEach(input => {
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      loginForm.dispatchEvent(new Event('submit'));
+    }
+  });
+});
+
+
   // Efecto de focus en los inputs
   const formInputs = document.querySelectorAll('input');
   
