@@ -129,6 +129,15 @@
     }
   });
   
+  formInputs.forEach(input => {
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      loginForm.dispatchEvent(new Event('submit'));
+    }
+  });
+});
+
+
   // Efecto de focus en los inputs
   const formInputs = document.querySelectorAll('input');
   
