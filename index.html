@@ -2,14 +2,18 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Hotel Nutrias</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Íconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tipografías de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -28,24 +32,51 @@
 
     <!-- Formulario -->
     <form class="login-form" id="loginForm">
+      <!-- Campo de correo -->
       <div class="form-group">
-        <label for="email">Correo Electrónico</label>
+        <label for="email">
+          Correo Electrónico 
+          <i class="fas fa-circle-info tooltip" title="Utiliza un correo válido."></i>
+        </label>
         <i class="input-icon fas fa-envelope"></i>
-        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required />
         <div class="validation-message" id="emailValidation"></div>
       </div>
 
+      <!-- Campo de contraseña -->
       <div class="form-group">
-        <label for="password">Contraseña</label>
+        <label for="password">
+          Contraseña 
+          <i class="fas fa-circle-info tooltip" title="Debe tener al menos 6 caracteres."></i>
+        </label>
         <i class="input-icon fas fa-lock"></i>
-        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
-        <i class="toggle-password fas fa-eye" id="togglePassword"></i>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required />
+        <i class="toggle-password fas fa-eye" id="togglePassword" title="Mostrar/Ocultar contraseña"></i>
         <div class="validation-message" id="passwordValidation"></div>
       </div>
 
+      <!-- Recordarme -->
+      <div class="form-group remember-me">
+        <input type="checkbox" id="rememberMe" name="rememberMe" />
+        <label for="rememberMe">Recordarme</label>
+      </div>
 
+      <!-- Indicador de carga -->
+      <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i> Iniciando sesión...
+      </div>
+
+      <!-- Botón de inicio de sesión -->
       <button type="submit" class="login-btn">Iniciar Sesión</button>
 
+      <!-- Botón para iniciar sesión con Google -->
+      <div class="social-login">
+        <button type="button" class="google-btn">
+          <i class="fab fa-google"></i> Iniciar sesión con Google
+        </button>
+      </div>
+
+      <!-- Enlaces adicionales -->
       <div class="login-links">
         <a href="#">¿Olvidaste tu contraseña?</a>
         <a href="#">Crear una cuenta</a>
@@ -58,6 +89,7 @@
     </div>
   </div>
 
+  <!-- Script principal -->
   <script src="script.js"></script>
 </body>
 
