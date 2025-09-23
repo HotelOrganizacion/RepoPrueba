@@ -77,6 +77,23 @@ body {
   opacity: 0.2;
 }
 
+@media screen and (max-width: 400px) {
+  .login-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .login-form input {
+    font-size: 14px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
 .waves:nth-of-type(2) {
   animation-delay: -5s;
   animation-duration: 12s;
