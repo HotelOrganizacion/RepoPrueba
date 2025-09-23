@@ -1,5 +1,4 @@
     document.addEventListener('DOMContentLoaded', function() {
-  // Crear partículas para el fondo
   function createParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 30;
@@ -25,13 +24,11 @@
   
   createParticles();
   
-  // Mostrar contenedor con animación
   const loginContainer = document.getElementById('loginContainer');
   setTimeout(() => {
     loginContainer.classList.add('visible');
   }, 300);
-  
-  // Validación de email en tiempo real
+
   const emailInput = document.getElementById('email');
   const emailValidation = document.getElementById('emailValidation');
   
@@ -41,7 +38,7 @@
       emailValidation.classList.remove('error', 'success');
       return;
     }
-    
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(emailInput.value)) {
       emailValidation.textContent = 'Email válido';
@@ -54,7 +51,6 @@
     }
   });
   
-  // Validación de contraseña en tiempo real
   const passwordInput = document.getElementById('password');
   const passwordValidation = document.getElementById('passwordValidation');
   
@@ -76,14 +72,12 @@
     }
   });
   
-  // Manejo del envío del formulario
   const loginForm = document.getElementById('loginForm');
   const loginBtn = document.querySelector('.login-btn');
   
   loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Validación final antes de enviar
     let isValid = true;
     
     if (!emailInput.value) {
@@ -97,9 +91,9 @@
       passwordValidation.classList.add('error');
       isValid = false;
     }
+  
     
     if (isValid) {
-      // Simulación de inicio de sesión exitoso
       loginBtn.textContent = 'Iniciando sesión...';
       loginBtn.disabled = true;
       
@@ -109,7 +103,6 @@
         loginBtn.disabled = false;
         loginForm.reset();
         
-        // Limpiar mensajes de validación
         emailValidation.textContent = '';
         emailValidation.classList.remove('error', 'success');
         passwordValidation.textContent = '';
@@ -118,7 +111,7 @@
     }
   });
   
-  // Efecto de focus en los inputs
+
   const formInputs = document.querySelectorAll('input');
   
   formInputs.forEach(input => {
@@ -135,3 +128,4 @@
     });
   });
 });
+// cambios
