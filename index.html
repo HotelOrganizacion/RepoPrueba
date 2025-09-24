@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Hotel Nutrias</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- Fondo animado con partículas -->
   <div class="particles-background" id="particles"></div>
@@ -18,7 +22,7 @@
   <div class="login-container" id="loginContainer">
     <!-- Header -->
     <div class="login-header">
-      <h1 class="logo">NUTRIAS<span>.</span></h1>
+      <h1 class="logo fade-in">NUTRIAS<span>.</span></h1>
       <p class="slogan">Experiencia de lujo y confort</p>
     </div>
 
@@ -39,6 +43,7 @@
         </label>
         <i class="input-icon fas fa-lock"></i>
         <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
         <i class="toggle-password fas fa-eye" id="togglePassword" title="Mostrar/Ocultar contraseña"></i>
         <div class="validation-message" id="passwordValidation"></div>
       </div>
@@ -53,6 +58,10 @@
       <div class="loading-indicator" id="loadingIndicator" style="display: none;">
         <i class="fas fa-spinner fa-spin"></i> Iniciando sesión...
       </div>
+        <i class="toggle-password fas fa-eye" id="togglePassword"></i>
+        <div class="validation-message" id="passwordValidation"></div>
+      </div>
+
 
       <button type="submit" class="login-btn">Iniciar Sesión</button>
 
@@ -77,4 +86,7 @@
 
   <script src="script.js"></script>
 </body>
+
+</html>
+
 </html>
